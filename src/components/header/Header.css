@@ -1,18 +1,16 @@
 .Header {
   background: #f4f4f4;
-  padding: 2em;
-}
-
-.logo {
-  max-width: 25%;
-  align-items:flex-end;
+  padding: 1.5em;
 }
 
 .header-container {
-    display: flex;
-    justify-content: center;
+  display: inline;
+}
+
+.logo {
+  max-width: 15%;
 }
 
 .title-header {
-    align-self: center;
+  align-self: center;
 }
