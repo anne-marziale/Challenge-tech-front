@@ -1,0 +1,18 @@
+.Header {
+  background: #f4f4f4;
+  padding: 2em;
+}
+
+.logo {
+  max-width: 25%;
+  align-items:flex-end;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-header {
+    align-self: center;
+}

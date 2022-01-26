@@ -1,0 +1,17 @@
+.member-title {
+    margin-bottom: 8%;
+}
+
+.member-container {
+    margin-bottom: 8%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  .form {
+    margin: 2em 0 4em 0;
+    text-align: center;
+  }
