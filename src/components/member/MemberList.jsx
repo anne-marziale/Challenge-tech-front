@@ -5,6 +5,29 @@ import './MemberList.css';
 
 function MemberList() {
   const [members, setMembers] = useState([]);
+  const [data, setData] = useState({
+    name: '',
+  });
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setData({
+      ...data,
+      [e.target.name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    const userData = {
+      name: data.name,
+    };
+    axios
+      .post('http://localhost:8000/api/members', userData)
+      .then((response) => {
+        console.log(response.status);
+        console.log(response.data.token);
+      });
+  };
 
   useEffect(() => {
     axios
@@ -15,13 +38,27 @@ function MemberList() {
 
   return (
     <div className="Memberlist">
-      <div className='form'>
-      <h2>Ajouter un(e) Argonaute</h2>
+      <form onSubmit={handleSubmit} className="form">
+        <h2>Ajouter un(e) Argonaute</h2>
 
-      <label for="name">Nom de l&apos;Argonaute</label>
-      <input id="name" name="name" type="text" placeholder="Charalampos" />
-      <button type="submit">Envoyer</button>
-      </div>
+        <label for="name">Nom de l&apos;Argonaute</label>
+        <input
+          id="name"
+          className="form-name"
+          name="name"
+          type="text"
+          placeholder="Charalampos"
+          value={data.name}
+          onChange={handleChange}
+        />
+
+        <button
+          type="submit"
+          onClick={() => alert("L'Argonaute a été ajoutée !")}
+        >
+          Envoyer
+        </button>
+      </form>
 
       <h2 className="member-title">Membres de l'équipage</h2>
       <div className="member-container">
