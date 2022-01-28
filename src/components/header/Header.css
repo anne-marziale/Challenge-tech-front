@@ -1,14 +1,14 @@
 .Header {
   background: #f4f4f4;
   padding: 1.5em;
+  padding-bottom: 3%;
 }
 
-.header-container {
-  display: inline;
-}
 
 .logo {
-  max-width: 15%;
+  max-width: 12%;
+  position: absolute;
+
 }
 
 .title-header {

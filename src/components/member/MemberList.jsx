@@ -21,6 +21,7 @@ function MemberList() {
     const userData = {
       name: data.name,
     };
+
     axios
       .post('http://localhost:8000/api/members', userData)
       .then((response) => {
@@ -54,6 +55,7 @@ function MemberList() {
 
         <button
           type="submit"
+          className="button"
           onClick={() => alert("L'Argonaute a été ajoutée !")}
         >
           Envoyer
