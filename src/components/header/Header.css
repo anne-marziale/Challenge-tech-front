@@ -1,5 +1,5 @@
 .Header {
-  background: #f4f4f4;
+  background: var(--second-color);
   padding: 1.5em;
   padding-bottom: 3%;
 }
@@ -13,4 +13,5 @@
 
 .title-header {
   align-self: center;
+  color: var(--main-color);
 }

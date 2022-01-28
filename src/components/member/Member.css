@@ -1,13 +1,12 @@
 .member-name {
-    padding: 0.25em 0;
-    font-size: 15px;
-  }
+  padding: 0.05em 0;
+}
 
 .member-container {
-  columns: 3;
+columns: 3;
 }
 
 .Member {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
