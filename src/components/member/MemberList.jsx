@@ -37,6 +37,10 @@ function MemberList() {
       .then((data) => setMembers(data));
   }, []);
 
+  const handleDelete = (id) => {
+    setMembers(members.filter(member => member.id !== id))
+  }
+
   return (
     <div className="Memberlist">
       <form onSubmit={handleSubmit} className="form">
@@ -66,7 +70,7 @@ function MemberList() {
       <div className="member-container">
         {members.map((member) => (
           <div key={member.id}>
-            <Member member={member} />
+            <Member member={member} deleteMember={handleDelete} />
           </div>
         ))}
       </div>

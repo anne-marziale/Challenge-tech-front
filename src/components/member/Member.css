@@ -1,12 +1,12 @@
-.member-name {
-  padding: 0.05em 0;
-}
-
 .member-container {
-columns: 3;
+  columns: 3;
+  text-align: center;
+  margin-left: 8%;
 }
 
-.Member {
-display: flex;
-flex-direction: column;
+.btn-member {
+  border: none;
+  background: var(--fourth-color);
+  color: var(--main-color);
+  font-size: 120%;
 }
